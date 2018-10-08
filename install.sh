@@ -61,10 +61,13 @@ echo "Installing firefox";
 brew cask install firefox
 
 echo "Installing chrome";
-brew cask install google-chrome
+brew cask install google-chrome-dev
 
 echo "Installing google drive";
 brew cask install google-backup-and-sync
+
+echo "Installing dropbox";
+brew cask install dropbox
 
 echo "Installing iterm2";
 brew cask install iterm2
@@ -81,8 +84,29 @@ brew cask install adobe-acrobat-reader
 echo "Installing java";
 brew cask install java
 
-echo "Installing atom";
-brew cask install atom
+echo "Installing hyperjs";
+brew cask install hyper
+
+echo "Installing docker";
+brew cask install docker
+
+echo "Installing virtualbox";
+brew cask install virtualbox
+
+echo "Installing postgres";
+brew cask install postgres
+
+echo "Installing dbeaver";
+brew cask install dbeaver-community
+
+echo "Installing evernote";
+brew cask install evernote
+
+echo "Installing go-server";
+brew cask install go-server
+
+echo "Installing go-agent";
+brew cask install go-agent
 
 echo "Installing mocha";
 npm i -g mocha
@@ -90,6 +114,8 @@ npm i -g mocha
 echo "Installing nodemon";
 npm i -g nodemon
 
+echo "Installing golang"
+brew install golang
 
 #Cleanup
 brew cleanup
