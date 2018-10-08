@@ -7,7 +7,7 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 #Ask for name to use in oh my zsh
-echo "Enter name to display in prompt"
+echo -n "Enter name to display in prompt"
 read name
 
 # Check for Homebrew,
