@@ -7,8 +7,12 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 #Ask for name to use in oh my zsh
-echo -n "Enter name to display in prompt"
+echo "\n\nEnter name to display in prompt"
 read name
+while [ -z "$name" ]
+do
+  read name
+done
 
 # Check for Homebrew,
 # Install if we don't have it
@@ -39,7 +43,7 @@ brew install ack
 brew install git
 
 
-echo $name | sh -c "$(curl -fsSL https://raw.githubusercontent.com/debuc/oh-my-zsh/develop/tools/install.sh)"
+echo $name | sh -c "$(curl -fsSL https://raw.githubusercontent.com/mepallabi/oh-my-zsh/develop/tools/install.sh)"
 
 echo "Installing vim";
 git clone --depth=1 https://github.com/nrjais/vimrc.git ~/.vim_runtime
@@ -57,11 +61,11 @@ brew cask tap
 echo "Installing slack";
 brew cask install slack
 
-echo "Installing firefox";
-brew cask install firefox
-
 echo "Installing chrome";
 brew cask install google-chrome-dev
+
+echo "Installing firefox";
+brew cask install firefox
 
 echo "Installing google drive";
 brew cask install google-backup-and-sync
@@ -84,38 +88,17 @@ brew cask install adobe-acrobat-reader
 echo "Installing java";
 brew cask install java
 
-echo "Installing hyperjs";
-brew cask install hyper
-
 echo "Installing docker";
 brew cask install docker
 
-echo "Installing virtualbox";
-brew cask install virtualbox
-
-echo "Installing postgres";
-brew cask install postgres
-
-echo "Installing dbeaver";
-brew cask install dbeaver-community
-
 echo "Installing evernote";
 brew cask install evernote
-
-echo "Installing go-server";
-brew cask install go-server
-
-echo "Installing go-agent";
-brew cask install go-agent
 
 echo "Installing mocha";
 npm i -g mocha
 
 echo "Installing nodemon";
 npm i -g nodemon
-
-echo "Installing golang"
-brew install golang
 
 #Cleanup
 brew cleanup

@@ -3,4 +3,4 @@
 
 
 ### Run command
-``$ curl https://raw.githubusercontent.com/debuc/mac-setup/master/install.sh | sh``
+``$ curl https://raw.githubusercontent.com/mepallabi/mac-setup/master/install.sh | sh``
